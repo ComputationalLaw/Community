@@ -1,4 +1,4 @@
-Welcome to the Computational Law Community!
+Welcome to the [Computational Law Community](https://computationallaw.github.io/Community)!
 
 Use the form below to request membership in our monthly call.
 
