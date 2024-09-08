@@ -1,4 +1,4 @@
-# Welcome to the [Computational Law Agentic AI Hub](https://computationallaw.github.io/Community)!
+# Welcome to the [Computational Law Agentic AI Hub](https://computationallaw.github.io/Community)
 
 ## [http://ComputationalLaw.org](http://ComputationalLaw.org)
 
