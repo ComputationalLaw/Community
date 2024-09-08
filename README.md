@@ -1,8 +1,8 @@
-# Welcome to the [Computational Law Community](https://computationallaw.github.io/Community)!
+# Welcome to the [Computational Law Agentic AI Hub](https://computationallaw.github.io/Community)!
 
 ## [http://ComputationalLaw.org](http://ComputationalLaw.org)
 
-Use the form below to request membership in our monthly online discussion.
+Use the form below to request an invitation to future Agentic AI discussions at [law.MIT.edu](https://law.mit.edu/ai) or research reviews at [Stanford CodeX](https://law.stanford.edu/codex-the-stanford-center-for-legal-informatics/projects/agentic-genai-transaction-systems)
 
 * Direct link to form: [https://forms.gle/J1qBAxnRP2whTVce9](https://forms.gle/J1qBAxnRP2whTVce9)
 
