@@ -20,7 +20,7 @@ Experience the newest developments in **AI Agents and legal innovation** at this
 
 🔹 **Engage in highly participatory discussions**  
 🔹 **Explore agent-based legal research & compliance tools**  
-🔹 **Join facilitated breakout sessions & guided scenario simulations**  
+🔹 **Join facilitated conversation & guided scenario simulations**  
 🔹 **Connect with a forward-thinking community**  
 
 > *No prior coding or legal background required!*
