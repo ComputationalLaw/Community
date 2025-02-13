@@ -42,7 +42,7 @@ This is an **invite-only** event. Secure your spot today!
 ## 🔍 Topics Covered
 - **The Rise of AI Agents in Law**
 - **Frameworks, Challenges & Opportunities**
-- **Agent-Based Legal Research Platforms**
+- **Agent-Based Legal Practice and Research Platforms**
 - **Autonomous Compliance Tools**
 - **Future of AI & Law**
 
