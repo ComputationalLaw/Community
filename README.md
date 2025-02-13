@@ -49,7 +49,6 @@ This is an **invite-only** event. Secure your spot today!
 ---
 
 ## 📢 Stay Connected
-📧 Have questions? Reach out to us at [contact@email.com](mailto:contact@email.com)  
 
 🔗 Follow updates on [Twitter](#) | [LinkedIn](#)
 
