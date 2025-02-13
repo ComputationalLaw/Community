@@ -30,7 +30,7 @@ Experience the newest developments in **AI Agents and legal innovation** at this
 ## 📝 Register
 This is an **invite-only** event. Secure your spot today!
 
-[➡ **Register Now**](#) _(Link to be updated)_
+[➡ **Register Now**](#) _(Link to be added soon)_
 
 ---
 
