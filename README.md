@@ -1,9 +1,58 @@
-# Welcome to the [Computational Law Agentic AI Hub](https://computationallaw.github.io/Community)
+---
+title: "AI Agents x Law - Stanford CodeX FutureLaw Workshop 2025"
+description: "Explore the latest AI and legal innovation at Stanford CodeX FutureLaw Workshop 2025."
+theme: jekyll-theme-cayman
+---
 
-## [http://ComputationalLaw.org](http://ComputationalLaw.org)
+# AI Agents x Law - Stanford CodeX FutureLaw Workshop 2025
 
-Use the form below to request an invitation to future Agentic AI discussions at [law.MIT.edu](https://law.mit.edu/ai) or research reviews at [Stanford CodeX](https://law.stanford.edu/codex-the-stanford-center-for-legal-informatics/projects/agentic-genai-transaction-systems)
+## 📅 Date & Time
+🗓 **April 8, 2025**  
+⏰ **3:00 PM Pacific / 6:00 PM Eastern**  
 
-* Direct link to form: [https://forms.gle/J1qBAxnRP2whTVce9](https://forms.gle/J1qBAxnRP2whTVce9)
+## 📍 Location
+This invite-only event will be **hybrid**, with both online and in-person participation.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdPbY28sv-motElHWNTINEy5UtxslB7wIk4zsZ4v89d-I2LnA/viewform?embedded=true" width="640" height="1467" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+---
+
+## 🚀 Summary
+Experience the newest developments in **AI Agents and legal innovation** at this **FutureLaw workshop**, co-presented by **Stanford CodeX** and **law.mit.edu (MIT Computational Law Report)**.
+
+🔹 **Engage in highly participatory discussions**  
+🔹 **Explore agent-based legal research & compliance tools**  
+🔹 **Join facilitated breakout sessions & guided scenario simulations**  
+🔹 **Connect with a forward-thinking community**  
+
+> *No prior coding or legal background required!*
+
+---
+
+## 📝 Register
+This is an **invite-only** event. Secure your spot today!
+
+[➡ **Register Now**](#) _(Link to be updated)_
+
+---
+
+## 🗓 Agenda
+🚧 **Coming Soon!** Stay tuned for updates.
+
+---
+
+## 🔍 Topics Covered
+- **The Rise of AI Agents in Law**
+- **Frameworks, Challenges & Opportunities**
+- **Agent-Based Legal Research Platforms**
+- **Autonomous Compliance Tools**
+- **Future of AI & Law**
+
+---
+
+## 📢 Stay Connected
+📧 Have questions? Reach out to us at [contact@email.com](mailto:contact@email.com)  
+
+🔗 Follow updates on [Twitter](#) | [LinkedIn](#)
+
+---
+
+© 2025 ComputationalLaw.org
