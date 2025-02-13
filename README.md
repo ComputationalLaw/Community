@@ -16,7 +16,7 @@ This invite-only event will be **hybrid**, with both online and in-person partic
 ---
 
 ## 🚀 Summary
-Experience the newest developments in **AI Agents and legal innovation** at this **FutureLaw workshop**, co-presented by **Stanford CodeX** and **law.mit.edu (MIT Computational Law Report)**.
+Experience the newest developments in **AI Agents and legal innovation** at this **FutureLaw workshop**, co-presented by **Stanford CodeX** and **law.MIT.edu (MIT Computational Law Report)**.
 
 🔹 **Engage in highly participatory discussions**  
 🔹 **Explore agent-based legal research & compliance tools**  
