@@ -1,9 +1,3 @@
----
-title: "AI Agents x Law - Stanford CodeX FutureLaw Workshop 2025"
-description: "Explore the latest AI and legal innovation at Stanford CodeX FutureLaw Workshop 2025."
-theme: jekyll-theme-cayman
----
-
 # AI Agents x Law - Stanford CodeX FutureLaw [Workshop](https://computationallaw.org) 2025
 
 ## 📅 Date & Time
