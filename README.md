@@ -46,6 +46,4 @@ This is an **invite-only** event. Secure your spot today!
 
 🔗 Follow updates on [Twitter](#) | [LinkedIn](#)
 
----
-
-© 2025 ComputationalLaw.org
+-----
