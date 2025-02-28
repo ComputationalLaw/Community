@@ -24,7 +24,8 @@ Experience the newest developments in **AI Agents and legal innovation** and get
 ## 📝 Register
 This is an **invite-only** event. Secure your spot today!
 
-[➡ **Request an Invitation**](mailto:agents@civics.com)
+[➡ **Request an Invitation**](mailto:agents@civics.com?subject=Invitation%20Request&body=Dear%20Team,%0A%0AI%20would%20like%20to%20request%20an%20invite%20to%20join%20your%20workshop%20on%20AI%20Agent%20x%20Law.%0A%0AThank%20you.)
+
 
 
 ---
