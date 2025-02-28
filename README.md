@@ -5,7 +5,7 @@
 ⏰ **2:00 PM Pacific / 4:00 PM Eastern**  
 
 ## 📍 Location
-This invite-only event will be **hybrid**, with both online and in-person participation.
+This invite-only event will be **hybrid**, with both online and in-person participation at Stanford Law School.
 
 ---
 
