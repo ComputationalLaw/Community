@@ -51,9 +51,3 @@ This is an **invite-only** event. Secure your spot today!
 
 
 ---
-
-## 📢 Stay Connected
-
-🔗 Follow updates on [Stanford Project](https://law.stanford.edu/codex-the-stanford-center-for-legal-informatics/projects/agentic-genai-transaction-systems/) | [Dazza's Blog](https://www.dazzagreenwood.com/)
-
------
