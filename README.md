@@ -10,7 +10,7 @@ This invite-only event will be **hybrid**, with both online and in-person partic
 ---
 
 ## 🚀 Summary
-Experience the newest developments in **AI Agents and legal innovation** and get **hands-on with structuring contract terms for agentic transactions** at this **FutureLaw workshop**, co-presented by **Stanford CodeX** and **law.MIT.edu (MIT Computational Law Report)**.
+Experience the newest developments in **AI Agents and legal innovation** and get **hands-on with structuring contract terms for agentic transactions** at this **FutureLaw workshop**, co-presented by **Stanford CodeX** and **law.MIT.edu (MIT Computational Law Report)** in collaboration with [Stanford HAI Digital Economy Lab](https://digitaleconomy.stanford.edu/).
 
 🔹 **Engage in highly participatory discussions**  
 🔹 **Explore agent-based transactional, compliance, and legal research capabilities**  
@@ -27,11 +27,6 @@ This is an **invite-only** event. Secure your spot today!
 [➡ **Request an Invitation**](https://forms.gle/bew2BymfMSf6S8zj6)
 
 
-
----
-
-## 🗓 Agenda
-🚧 **Coming Soon!** Stay tuned for updates.
 
 ---
 
