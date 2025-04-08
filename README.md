@@ -25,23 +25,51 @@ Experience the newest developments in **AI Agents and legal innovation** and get
 
 **NOTE: This event now has a waiting list**
 
-This is an **invite-only** event. Secure your spot today!
-
 [➡ **Request an Invitation**](https://forms.gle/bew2BymfMSf6S8zj6)
-
 
 
 ---
 
-## 🔍 Topics Covered
+## 🔍 Program
 
-### Introductory Overview
-- **The Rise of AI Agents in Law**
-- **Frameworks, Challenges & Opportunities**
-- **AI Agent-Based Commercial Transactions**
-- **AI Agent-Based Legal Processes**
-- **AI Agent Compliance Tools**
-- **Future of AI Agents & Law**
+### Welcome to Stanford
+
+![Image](https://github.com/user-attachments/assets/abb7b15c-a99d-4b77-b675-93341c3ace66)
+
+Speaker: [Sandy Pentland](https://www.linkedin.com/in/alexsandypentland/)  
+
+### Introductions and Setting the Context
+
+![Image](https://github.com/user-attachments/assets/41f662a0-fba5-447a-9da9-6e81357b3430)
+
+Speaker: [Dazza Greenwood](https://www.linkedin.com/in/dazzagreenwood/)
+
+### Legal Issues and Options for AI Agents
+
+![Image](https://github.com/user-attachments/assets/3a8f9145-b013-41ad-9b6e-0893ca10a035)
+
+Speaker: [Diana Stern](https://www.linkedin.com/in/dianajstern/)
+
+
+### Legal Practice Innovation with AI Agents
+
+![Image](https://github.com/user-attachments/assets/b7d8da70-9139-46d4-b599-7086fbfa7320)
+
+Speaker: [Damien Riehl](https://www.linkedin.com/in/damienriehl/)
+
+
+### Open Source Demo for AI Agent Transactions
+
+![Image](https://github.com/user-attachments/assets/6292cf67-617d-471d-8e88-26a6d0aa0d94)
+
+Speaker: [Andor Kesselman](https://www.linkedin.com/in/andorsk/)
+
+### Authenticated Delegation of Authority for AI Agents
+
+![Image](https://github.com/user-attachments/assets/b6abedb0-58fe-46c5-8d6e-5896889a093a)
+
+Speaker: [Tobin South](https://www.linkedin.com/in/tobinsouth/)
+
 
 ### Hands-On Challenge
 - **Scan of Example Contract Terms Used Today to Cover Agents Systems and Transactions**
@@ -54,25 +82,25 @@ This is an **invite-only** event. Secure your spot today!
 
 ## Blog Posts
 
-[https://www.dazzagreenwood.com/p/when-ai-agents-conduct-transactions](https://www.dazzagreenwood.com/p/when-ai-agents-conduct-transactions)
+* [https://www.dazzagreenwood.com/p/when-ai-agents-conduct-transactions](https://www.dazzagreenwood.com/p/when-ai-agents-conduct-transactions)
 
-[https://www.dazzagreenwood.com/p/ueta-and-llm-agents-a-deep-dive-into](https://www.dazzagreenwood.com/p/ueta-and-llm-agents-a-deep-dive-into)
+* [https://www.dazzagreenwood.com/p/ueta-and-llm-agents-a-deep-dive-into](https://www.dazzagreenwood.com/p/ueta-and-llm-agents-a-deep-dive-into)
 
 ## Authenticated Delegated Authorizations to AI Agents
 
-[https://arxiv.org/abs/2501.09674](https://arxiv.org/abs/2501.09674)
+* [https://arxiv.org/abs/2501.09674](https://arxiv.org/abs/2501.09674)
 
 ## With CodeX: Three Part Series by Diana Stern & Dazza Greenwood:
 
-[https://law.stanford.edu/2025/01/14/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement](https://law.stanford.edu/2025/01/14/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement/)
+* [https://law.stanford.edu/2025/01/14/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement](https://law.stanford.edu/2025/01/14/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement/)
 
-[https://law.stanford.edu/2025/01/21/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement-2](https://law.stanford.edu/2025/01/21/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement-2)
+* [https://law.stanford.edu/2025/01/21/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement-2](https://law.stanford.edu/2025/01/21/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement-2)
 
-[https://law.stanford.edu/2025/03/26/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement-part-3-of-3](https://law.stanford.edu/2025/03/26/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement-part-3-of-3)
+* [https://law.stanford.edu/2025/03/26/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement-part-3-of-3](https://law.stanford.edu/2025/03/26/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement-part-3-of-3)
 
 ## With Consumer Reports Innovation Lab: Exploration of Consumer Expectation of their AI Agents
 
-[https://innovation.consumerreports.org/empowering-consumers-with-personal-ai-agents-legal-foundations-and-design-considerations](https://innovation.consumerreports.org/empowering-consumers-with-personal-ai-agents-legal-foundations-and-design-considerations)
+* [https://innovation.consumerreports.org/empowering-consumers-with-personal-ai-agents-legal-foundations-and-design-considerations](https://innovation.consumerreports.org/empowering-consumers-with-personal-ai-agents-legal-foundations-and-design-considerations)
 
-[https://innovation.consumerreports.org/engineering-loyalty-by-design-in-agentic-systems](https://innovation.consumerreports.org/engineering-loyalty-by-design-in-agentic-systems)
+* [https://innovation.consumerreports.org/engineering-loyalty-by-design-in-agentic-systems](https://innovation.consumerreports.org/engineering-loyalty-by-design-in-agentic-systems)
 
