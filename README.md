@@ -34,13 +34,13 @@ Experience the newest developments in **AI Agents and legal innovation** and get
 
 ### Introductions
 
-![Image](https://github.com/user-attachments/assets/cef08e39-2330-4406-9ebe-c5942c67f646)
+![Image](https://github.com/user-attachments/assets/abb7b15c-a99d-4b77-b675-93341c3ace66)
 
 Speaker: [Dazza Greenwood](https://www.linkedin.com/in/dazzagreenwood/)
 
 ### Welcome Remarks
 
-![Image](https://github.com/user-attachments/assets/abb7b15c-a99d-4b77-b675-93341c3ace66)
+![Image](https://github.com/user-attachments/assets/cef08e39-2330-4406-9ebe-c5942c67f646)
 
 Speaker: [Sandy Pentland](https://www.linkedin.com/in/alexsandypentland/)  
 
