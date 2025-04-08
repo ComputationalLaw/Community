@@ -32,33 +32,39 @@ Experience the newest developments in **AI Agents and legal innovation** and get
 
 ## 🔍 Program
 
-### Welcome to Stanford
+### Introductions
+
+![Image](https://github.com/user-attachments/assets/cef08e39-2330-4406-9ebe-c5942c67f646)
+
+Speaker: [Dazza Greenwood](https://www.linkedin.com/in/dazzagreenwood/)
+
+### Welcome Remarks
 
 ![Image](https://github.com/user-attachments/assets/abb7b15c-a99d-4b77-b675-93341c3ace66)
 
 Speaker: [Sandy Pentland](https://www.linkedin.com/in/alexsandypentland/)  
 
-### Introductions and Setting the Context
+### Setting the Context for AI Agents x Law
 
 ![Image](https://github.com/user-attachments/assets/41f662a0-fba5-447a-9da9-6e81357b3430)
 
 Speaker: [Dazza Greenwood](https://www.linkedin.com/in/dazzagreenwood/)
 
-### Legal Issues and Options for AI Agents
+### Legal Issues and Options for AI Agents Conducting Transactions
 
 ![Image](https://github.com/user-attachments/assets/3a8f9145-b013-41ad-9b6e-0893ca10a035)
 
 Speaker: [Diana Stern](https://www.linkedin.com/in/dianajstern/)
 
 
-### Legal Practice Innovation with AI Agents
+### Legal Practice and Innovating Law with AI Agents
 
 ![Image](https://github.com/user-attachments/assets/b7d8da70-9139-46d4-b599-7086fbfa7320)
 
 Speaker: [Damien Riehl](https://www.linkedin.com/in/damienriehl/)
 
 
-### Open Source Demo for AI Agent Transactions
+### Open Source Demo Example of Legal Error Handling for AI Agent
 
 ![Image](https://github.com/user-attachments/assets/6292cf67-617d-471d-8e88-26a6d0aa0d94)
 
