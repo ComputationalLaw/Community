@@ -23,14 +23,16 @@ Experience the newest developments in **AI Agents and legal innovation** and get
 
 ## 📝 Register
 
-**NOTE: This event now has a waiting list**
+**NOTE: Registration is Now Closed**
 
-[➡ **Request an Invitation**](https://forms.gle/bew2BymfMSf6S8zj6)
+[➡ **AI Agents x Law Updates and Comment Form**](https://forms.gle/bew2BymfMSf6S8zj6)
 
 
 ---
 
-## 🔍 Program
+# 🔍 Program
+
+## *Video of this program is now available online, [HERE](https://www.dazzagreenwood.com/p/ai-agents-x-law-initiative).*
 
 ### Introductions
 
