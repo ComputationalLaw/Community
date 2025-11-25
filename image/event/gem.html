@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Evals in the Legal Domain | AI Agents x Law</title>
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --stanford-red: #8C1515;
+            --mit-gray: #757575;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f8f9fa;
+            --text-main: #333;
+            --white: #ffffff;
+            --accent: #00509e;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
+        h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; }
+        h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--stanford-red); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        p { margin-bottom: 1.5rem; color: #555; }
+        a { text-decoration: none; color: var(--accent); transition: 0.2s; }
+        a:hover { color: var(--stanford-red); }
+        ul { margin-left: 20px; margin-bottom: 1.5rem; color: #555; }
+        li { margin-bottom: 0.5rem; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light-bg); }
+        
+        /* --- HEADER --- */
+        header { padding: 20px 0; border-bottom: 1px solid #eee; background: white; position: sticky; top: 0; z-index: 100; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.1rem; }
+        
+        /* --- HERO --- */
+        .hero { padding: 100px 0; background: radial-gradient(circle at top right, #fdfbfb, #f3f3f3); }
+        .hero h1 { font-size: 3.5rem; color: var(--dark-bg); }
+        .hero-meta { font-size: 1.2rem; font-weight: 700; color: var(--stanford-red); text-transform: uppercase; margin-bottom: 1rem; }
+        .btn {
+            display: inline-block;
+            background-color: var(--stanford-red);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        .btn:hover { background-color: #600e0e; color: white; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(140, 21, 21, 0.2); }
+
+        /* --- SPEAKERS GRID --- */
+        .speakers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .speaker-card { background: white; border: 1px solid #eee; border-radius: 8px; padding: 25px; transition: transform 0.2s ease; }
+        .speaker-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .speaker-role { font-size: 0.8rem; color: var(--stanford-red); text-transform: uppercase; font-weight: 700; display: block; margin-bottom: 5px; }
+        .speaker-topic { font-style: italic; color: #666; font-size: 0.9rem; margin-top: 10px; display: block; border-top: 1px solid #eee; padding-top: 10px; }
+
+        /* --- ARCHIVE SECTION --- */
+        .archive-section { background-color: #f4f4f4; padding: 60px 0; border-top: 1px solid #ddd; }
+        .archive-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; }
+        .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .resource-card { background: white; padding: 20px; border-radius: 5px; border-left: 4px solid var(--mit-gray); }
+        .resource-card h4 { margin-bottom: 10px; }
+
+        footer { background: var(--dark-bg); color: #888; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: 0; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-flex { flex-direction: column; align-items: flex-start; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">
+                <strong>Stanford CodeX</strong> | <strong>law.MIT.edu</strong> | <strong>Stanford HAI</strong>
+            </div>
+            <div>
+                <a href="#previous-work" style="font-size: 0.9rem; color: var(--mit-gray);">View Past Events ↓</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero container">
+        <div class="hero-meta">Upcoming Convening: Dec 3, 2025</div>
+        <h1>Custom Evals in the Legal Domain:<br>Setting the Stage for Agentic AI</h1>
+        <p style="font-size: 1.3rem; max-width: 800px; color: #333;">
+            A foundational convening to define the landscape of Evaluation Driven Development, Fiduciary Duties for Agents, and the measurement of AI in Law.
+        </p>
+        <p><strong>📍 Location:</strong> Stanford University (Palo Alto) & Virtual<br>
+        <strong>🗓 Date:</strong> Wednesday, December 3, 2025</p>
+        
+        <a href="https://forms.gle/bew2BymfMSf6S8zj6" class="btn" target="_blank">Request Invite / Register</a>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>The Challenge: Trust & Loyalty</h2>
+            <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <p>As Generative AI transitions from chat interfaces to autonomous agents capable of executing complex tasks, the legal and business worlds face a critical bottleneck: <strong>Trust.</strong></p>
+                    <p>Standard industry benchmarks (like MMLU) are insufficient for legal reasoning and fiduciary duties. To deploy AI agents safely, we need <strong>Custom Evaluations</strong>.</p>
+                </div>
+                <div style="flex: 1; min-width: 300px; background: #f9f9f9; padding: 20px; border-radius: 8px;">
+                    <h3>The 2026 Roadmap</h3>
+                    <p>This event is the "starting gun." While 2025 has been about exploring agents, 2026 will be about measuring them. We are setting the stage to move beyond generic benchmarks and towards rigorous evaluation of <strong>Loyalty</strong> and <strong>Fiduciary Duty</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <h2>The Dec 3 Brain Trust</h2>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <span class="speaker-role">Host & Convenor</span>
+                    <h3>Dazza Greenwood</h3>
+                    <p>law.MIT.edu & Stanford CodeX</p>
+                    <span class="speaker-topic">"Introductory Remarks: From Benchmarks to Custom Evals"</span>
+                </div>
+                <div class="speaker-card">
+                    <span class="speaker-role">Legal Domain</span>
+                    <h3>Tara Waters</h3>
+                    <p>Vals AI & TLW Consulting</p>
+                    <span class="speaker-topic">"Evals in the Context of AI in the Legal Domain"</span>
+                </div>
+                <div class="speaker-card">
+                    <span class="speaker-role">Agent Measurement</span>
+                    <h3>Roman Engeler</h3>
+                    <p>Co-founder & CTO, Atla</p>
+                    <span class="speaker-topic">"Evals in the Context of Measurement of AI Agents"</span>
+                </div>
+                <div class="speaker-card">
+                    <span class="speaker-role">Fiduciary & Loyalty</span>
+                    <h3>Dan Leininger</h3>
+                    <p>Consumer Reports Innovation Lab</p>
+                    <span class="speaker-topic">"Evals in the Context of Loyalty Measurement for AI Agents"</span>
+                </div>
+                 <div class="speaker-card">
+                    <span class="speaker-role">Computational Law</span>
+                    <h3>Robert Mahari</h3>
+                    <p>Assoc. Director, Stanford CodeX</p>
+                    <span class="speaker-topic">"Evals in the Context of Computational Law"</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="previous-work" class="archive-section">
+        <div class="container">
+            <div class="archive-header">
+                <div>
+                    <h2 style="border:none; margin-bottom: 0;">Previous Initiative: AI Agents x Law</h2>
+                    <p style="margin-bottom: 0;"><strong>April 8, 2025 | Stanford FutureLaw Workshop</strong></p>
+                </div>
+                <a href="https://www.dazzagreenwood.com/p/ai-agents-x-law-initiative" target="_blank" style="font-weight: bold;">View Full Recap & Videos →</a>
+            </div>
+
+            <p>In April 2025, we explored the structuring of contract terms for agentic transactions. This work laid the foundation for our current focus on Evaluation.</p>
+
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h4>Key Sessions</h4>
+                    <ul>
+                        <li><strong>Setting the Context:</strong> Dazza Greenwood</li>
+                        <li><strong>Legal Issues for Agents:</strong> Diana Stern</li>
+                        <li><strong>Authenticated Delegation:</strong> Tobin South</li>
+                        <li><strong>Legal Practice Innovation:</strong> Damien Riehl</li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Core Readings</h4>
+                    <ul>
+                        <li><a href="https://law.stanford.edu/2025/01/14/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement/">From Fine Print to Machine Code</a> (Stern & Greenwood)</li>
+                        <li><a href="https://innovation.consumerreports.org/engineering-loyalty-by-design-in-agentic-systems">Engineering Loyalty by Design</a> (Consumer Reports)</li>
+                        <li><a href="https://arxiv.org/abs/2501.09674">Authenticated Delegated Authorizations</a> (arXiv)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Stanford CodeX / law.MIT.edu.</p>
+            <p>Questions? Contact Dazza Greenwood.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

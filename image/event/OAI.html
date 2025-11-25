@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Custom AI Evals for Law and AI Agents – Stanford–MIT Convening</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Custom AI evaluations for law and AI agents – a Stanford–MIT online convening on December 3, 2025, co-hosted by law.MIT.edu, Stanford CodeX, and the Stanford Digital Economy Lab at Stanford HAI."
+  />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Custom AI Evals for Law and AI Agents – Stanford–MIT Convening" />
+  <meta property="og:description" content="Online-first event on custom AI evaluations for law and AI agents, Dec 3, 2025." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card-bg: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.35);
+      --shadow-soft: 0 16px 40px rgba(15, 23, 42, 0.85);
+      --radius-xl: 1.25rem;
+      --radius-2xl: 1.5rem;
+      --transition-fast: 160ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0b1120 0, #020617 55%, #020617 100%);
+      color: var(--text-main);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3.5rem;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      padding: 1.75rem 1.75rem 2rem;
+      background: radial-gradient(circle at top left, #1d283a, #020617 55%);
+      border-radius: 1.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.12), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .header-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .badge {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 0.3rem 0.7rem;
+      color: var(--text-muted);
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      white-space: nowrap;
+    }
+
+    .badge--accent {
+      border-color: rgba(56, 189, 248, 0.9);
+      color: var(--accent);
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
+      line-height: 1.08;
+      margin: 0 0 0.9rem;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      max-width: 680px;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.25rem;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-meta strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+        background var(--transition-fast), border-color var(--transition-fast);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #0b1120;
+      box-shadow: 0 14px 40px rgba(56, 189, 248, 0.48);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 55px rgba(56, 189, 248, 0.6);
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--text-main);
+      border-color: rgba(148, 163, 184, 0.6);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: rgba(148, 163, 184, 0.95);
+      text-decoration: none;
+    }
+
+    .hero-actions-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    nav {
+      margin-top: 1.7rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      padding-top: 1rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: rgba(15, 23, 42, 0.6);
+    }
+
+    .nav-links a:hover {
+      border-color: rgba(148, 163, 184, 0.6);
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    main {
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 1.75rem;
+    }
+
+    section {
+      margin-bottom: 1.75rem;
+      padding: 1.5rem 1.5rem 1.6rem;
+      border-radius: var(--radius-2xl);
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.9);
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin: 0 0 0.8rem;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin: 1rem 0 0.35rem;
+    }
+
+    .section-kicker {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin: 0 0 0.75rem;
+    }
+
+    ul {
+      margin: 0.35rem 0 0.9rem 1.1rem;
+      padding: 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+
+    .card-subtle {
+      margin-top: 1rem;
+      padding: 0.8rem 0.9rem;
+      border-radius: 0.95rem;
+      background: radial-gradient(circle at top left, var(--accent-soft), transparent 70%);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .card-subtle strong {
+      color: var(--accent);
+    }
+
+    .speakers-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-top: 0.6rem;
+    }
+
+    .speaker {
+      padding: 0.95rem 0.85rem;
+      border-radius: 1rem;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.96));
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .speaker-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .speaker-name {
+      font-size: 0.98rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .speaker-status {
+      font-size: 0.76rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-left: 0.4rem;
+    }
+
+    .speaker-role {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .speaker-topic {
+      font-size: 0.82rem;
+      color: var(--accent);
+      margin-top: 0.1rem;
+    }
+
+    .agenda-block {
+      margin-top: 0.6rem;
+    }
+
+    .agenda-item {
+      margin-bottom: 0.7rem;
+    }
+
+    .agenda-time {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin-bottom: 0.1rem;
+    }
+
+    .agenda-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.1rem;
+    }
+
+    .agenda-speaker {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .tag-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin: 0.1rem 0.3rem 0.1rem 0;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding: 1.1rem 0.4rem 0;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    footer p {
+      margin-bottom: 0.4rem;
+    }
+
+    @media (max-width: 840px) {
+      .page {
+        padding-inline: 1rem;
+      }
+
+      header {
+        padding-inline: 1.3rem;
+      }
+
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-meta {
+        flex-direction: column;
+      }
+
+      section {
+        padding-inline: 1.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header id="top">
+      <div class="header-inner">
+        <div class="badge-row">
+          <span class="badge badge--accent">Stanford–MIT Online Convening</span>
+          <span class="badge">Co-hosted by Stanford CodeX</span>
+          <span class="badge">Stanford HAI Digital Economy Lab</span>
+          <span class="badge">law.MIT.edu</span>
+        </div>
+
+        <h1 class="hero-title">
+          Custom AI Evals for Law and AI Agents
+        </h1>
+        <p class="hero-subtitle">
+          A focused online-first convening on how to design, run, and govern
+          custom evaluations for legal AI systems and AI agents – with a special
+          emphasis on duty of loyalty, evaluation-driven development, and
+          practice-grounded benchmarks that real institutions can rely on.
+        </p>
+
+        <div class="hero-meta">
+          <span><strong>When</strong> Wednesday, December 3, 2025 · Late morning – early afternoon (PT)</span>
+          <span><strong>Where</strong> Online-first (Zoom), hosted from Stanford. Some speakers in person, others remote.</span>
+        </div>
+
+        <div class="hero-actions">
+          <!-- Registration button now points to your existing Google Form -->
+          <a href="https://forms.gle/bew2BymfMSf6S8zj6" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Request updates / register interest
+          </a>
+          <a href="#overview" class="btn btn-secondary">View event overview</a>
+          <span class="hero-actions-note">
+            This session is the starting point for a 2026 program on legal AI evals and fiduciary duties for AI agents.
+          </span>
+        </div>
+
+        <nav aria-label="Section navigation">
+          <ul class="nav-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#who-should-attend">Who should attend</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <section id="overview">
+          <div class="section-kicker">Overview</div>
+          <h2>Why this convening</h2>
+          <p>
+            In law and adjacent regulated domains, generic model leaderboards are not enough.
+            Legal teams, regulators, and product leaders need evaluation practices that reflect
+            real work, real risk, and real duties to clients and consumers.
+          </p>
+          <p>
+            This December 3 session is the starting gun for a coordinated program on
+            custom evaluations in the legal domain, with a special focus on AI agents that act
+            on behalf of people and organizations. Rather than chasing benchmark scores,
+            the convening focuses on evaluation as a core governance function:
+          </p>
+          <ul>
+            <li>Deciding whether to deploy or upgrade systems.</li>
+            <li>Monitoring and improving them over time.</li>
+            <li>Demonstrating trustworthiness, compliance, and loyalty to end users.</li>
+          </ul>
+          <p>
+            The speakers form an initial brain trust for work that will continue through 2026,
+            including deeper collaboration on evaluation methods, legal standards, and
+            shared evaluation artefacts.
+          </p>
+          <div class="card-subtle">
+            <strong>Looking ahead.</strong>
+            In 2026 this effort will expand into working groups on fiduciary duties
+            for AI agents, shared legal evaluation packs, comparative studies of evaluation
+            platforms, and concrete methods for LLM-as-a-Judge and hybrid human plus LLM assessment.
+          </div>
+        </section>
+
+        <section id="agenda">
+          <div class="section-kicker">Format</div>
+          <h2>Draft agenda</h2>
+          <p>
+            The session is designed to be concise and focused: short framing remarks,
+            targeted contributions, and a closing discussion on priorities for 2026.
+            Exact timings will be finalized with speakers.
+          </p>
+          <div class="agenda-block">
+            <div class="agenda-item">
+              <div class="agenda-time">Opening</div>
+              <div class="agenda-title">Welcome and framing: from benchmarks to governance</div>
+              <div class="agenda-speaker">Dazza Greenwood (Host and Convenor)</div>
+            </div>
+
+            <div class="agenda-item">
+              <div class="agenda-time">Segment</div>
+              <div class="agenda-title">Evals in the context of AI in the legal domain</div>
+              <div class="agenda-speaker">Tara Waters</div>
+            </div>
+
+            <div class="agenda-item">
+              <div class="agenda-time">Segment</div>
+              <div class="agenda-title">Evals in the context of measurement of AI agents</div>
+              <div class="agenda-speaker">Roman Engeler</div>
+            </div>
+
+            <div class="agenda-item">
+              <div class="agenda-time">Segment</div>
+              <div class="agenda-title">
+                Evals in the context of loyalty measurement for AI agents <span class="speaker-status">(tentative)</span>
+              </div>
+              <div class="agenda-speaker">Dan Leininger</div>
+            </div>
+
+            <div class="agenda-item">
+              <div class="agenda-time">Segment</div>
+              <div class="agenda-title">Evals in the context of computational law</div>
+              <div class="agenda-speaker">Robert Mahari</div>
+            </div>
+
+            <div class="agenda-item">
+              <div class="agenda-time">Discussion</div>
+              <div class="agenda-title">Panel and audience Q and A: priorities for 2026</div>
+              <div class="agenda-speaker">All speakers</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="who-should-attend">
+          <div class="section-kicker">Audience</div>
+          <h2>Who this is for</h2>
+          <p>
+            This convening is intended for people who carry responsibility for whether
+            and how AI is deployed in legal or adjacent high-stakes settings, including:
+          </p>
+          <ul>
+            <li>Law firm partners, innovation leads, and legal operations professionals.</li>
+            <li>In-house legal, risk, and compliance teams.</li>
+            <li>Product, data, and evaluation leads at AI companies.</li>
+            <li>Researchers in law, AI, HCI, and public policy.</li>
+            <li>Regulators and policymakers exploring standards for legal and agentic AI.</li>
+          </ul>
+          <p>
+            No prior specialization in evaluation is required. The goal is to create a shared
+            vocabulary and foundation for deeper technical and legal work.
+          </p>
+        </section>
+
+        <section id="organizers">
+          <div class="section-kicker">Organizers</div>
+          <h2>Co-convening institutions</h2>
+          <p>
+            This event is jointly convened by:
+          </p>
+          <ul>
+            <li><strong>law.MIT.edu</strong> (MIT Computational Law Report and related research at the MIT Media Lab).</li>
+            <li><strong>Stanford CodeX</strong>, the Stanford Center for Legal Informatics.</li>
+            <li><strong>Stanford Digital Economy Lab at Stanford HAI</strong>.</li>
+          </ul>
+          <p>
+            Together, these institutions are coordinating a broader program on
+            evaluation for legal AI and AI agents, including workshops, research
+            collaborations, and practical guidance for practitioners and policymakers.
+          </p>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <section id="speakers">
+          <div class="section-kicker">Speakers</div>
+          <h2>Confirmed speakers</h2>
+
+          <div class="speakers-list">
+            <div class="speaker">
+              <div class="speaker-header">
+                <div class="speaker-name">Dazza Greenwood</div>
+                <div class="speaker-role">Host and Convenor · law.MIT.edu · Stanford CodeX · Stanford Digital Economy Lab</div>
+                <div class="speaker-topic">Introductory remarks and overall framing</div>
+              </div>
+              <p>
+                Daniel “Dazza” Greenwood is a researcher at the MIT Media Lab and
+                affiliate at Stanford CodeX focused on computational law, AI agent
+                governance, and custom AI evaluation. He leads the law.MIT.edu initiative
+                and created Lake Merritt, an open evaluation system for high-stakes AI use cases.
+              </p>
+            </div>
+
+            <div class="speaker">
+              <div class="speaker-header">
+                <div class="speaker-name">Tara Waters</div>
+                <div class="speaker-role">Legal technology and AI evaluation leader · Vals AI / TLW Consulting</div>
+                <div class="speaker-topic">Evals in the context of AI in the legal domain</div>
+              </div>
+              <p>
+                Tara is a UK-based lawyer and legal technology innovator who has led
+                large-scale adoption of generative AI in law firms and now drives
+                landmark benchmarking studies with Vals AI. Her work focuses on how
+                legal AI tools compare to human lawyers on real-world tasks, and how
+                firms can use structured evaluations to guide adoption and risk management.
+              </p>
+            </div>
+
+            <div class="speaker">
+              <div class="speaker-header">
+                <div class="speaker-name">Roman Engeler</div>
+                <div class="speaker-role">Co-founder and CTO, Atla</div>
+                <div class="speaker-topic">Evals in the context of measurement of AI agents</div>
+              </div>
+              <p>
+                Roman co-founded Atla, a company building the evaluation and improvement
+                layer for AI agents. With a background in robotics and AI safety research,
+                he focuses on step-level evaluation, automatic failure pattern detection,
+                and specialized LLM-as-a-Judge models to help teams systematically
+                understand and improve agentic systems.
+              </p>
+            </div>
+
+            <div class="speaker">
+              <div class="speaker-header">
+                <div class="speaker-name">
+                  Dan Leininger
+                  <span class="speaker-status">Tentative</span>
+                </div>
+                <div class="speaker-role">Head of Experimental Engineering, Consumer Reports Innovation Lab</div>
+                <div class="speaker-topic">Evals in the context of loyalty measurement for AI agents</div>
+              </div>
+              <p>
+                Dan leads technical research at Consumer Reports on generative AI and
+                consumer-facing agent systems. He has developed an evaluation-driven
+                development approach for systems such as AskCR and plays a central role
+                in the Loyal Agents initiative on fiduciary duties and duty of loyalty for AI agents.
+              </p>
+            </div>
+
+            <div class="speaker">
+              <div class="speaker-header">
+                <div class="speaker-name">Robert Mahari</div>
+                <div class="speaker-role">Associate Director, Stanford CodeX</div>
+                <div class="speaker-topic">Evals in the context of computational law</div>
+              </div>
+              <p>
+                Robert is a computational law researcher with a joint JD-PhD
+                background in law and AI. His work covers judicial behavior,
+                legal NLP, data governance, and verifiable AI evaluation. At CodeX,
+                he leads initiatives that connect evaluation practice to legal
+                standards, precedent, and institutional behavior.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-kicker">Scope</div>
+          <h2>What we mean by “evals” here</h2>
+          <p>
+            Throughout this series, “evals” is used broadly to include:
+          </p>
+          <ul>
+            <li>Task-level evaluations for specific legal and regulatory tasks.</li>
+            <li>Process and step-level evaluations for AI agents.</li>
+            <li>System-level impact measurements over time.</li>
+            <li>Normative and legal evaluations related to duties and compliance.</li>
+          </ul>
+          <p>
+            The December convening will clarify these concepts and highlight
+            approaches that practitioners can adopt or adapt inside their own institutions.
+          </p>
+        </section>
+
+        <section>
+          <div class="section-kicker">Topics</div>
+          <h2>Keywords and themes</h2>
+          <div>
+            <span class="tag-pill">Custom evaluations</span>
+            <span class="tag-pill">Legal AI</span>
+            <span class="tag-pill">AI agents</span>
+            <span class="tag-pill">Duty of loyalty</span>
+            <span class="tag-pill">Fiduciary duties</span>
+            <span class="tag-pill">Evaluation-driven development</span>
+            <span class="tag-pill">LLM-as-a-Judge</span>
+            <span class="tag-pill">Computational law</span>
+            <span class="tag-pill">Data governance</span>
+            <span class="tag-pill">Responsible AI</span>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <p>
+        Questions or interest in the 2026 working streams:
+        contact the organizers via law.MIT.edu, Stanford CodeX, or the Stanford Digital Economy Lab.
+      </p>
+      <p>
+        This page is a simple static site intended for GitHub Pages or the computationallaw.org front page.
+        To update registration details, adjust the registration link in the header as needed.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
