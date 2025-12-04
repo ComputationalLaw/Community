@@ -65,6 +65,26 @@
             box-shadow: 0 5px 15px rgba(140, 21, 21, 0.2);
         }
 
+        /* --- VIDEO CONTAINER --- */
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
         /* --- SPEAKERS GRID --- */
         .speakers-grid {
             display: grid;
@@ -189,16 +209,17 @@
         <p>
             <strong>📍 Location:</strong> Hosted from Stanford University (Palo Alto) with full virtual participation<br>
             <strong>🗓 Date:</strong> Wednesday, December 3, 2025<br>
-            <strong>🕛 Time:</strong> 12:00–1:30 PM Pacific
-        </p>
-
-        <p style="margin-top: 0.5rem; color: #555;">
-            🎥 <em>Recording and recap coming soon — use the form below to get updates or inquire about getting involved in the 2026 evaluation work.</em>
+            <strong>🎥 Status:</strong> Event concluded. Watch the full recording below.
         </p>
         
         <a href="https://forms.gle/bew2BymfMSf6S8zj6" class="btn" target="_blank" rel="noopener noreferrer">
             Get Updates / Get Involved
         </a>
+
+        <!-- Video Embed -->
+        <div class="video-responsive">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/mw6yo_Y3FqQ?si=JgCOkw5JHaOu5MZx" title="Custom Evals in the Legal Domain - Event Recording" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </section>
 
     <section class="section">
