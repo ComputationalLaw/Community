@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Evals in the Legal Domain | AI Agents x Law</title>
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --stanford-red: #8C1515;
+            --mit-gray: #757575;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f8f9fa;
+            --text-main: #333;
+            --white: #ffffff;
+            --accent: #00509e;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
+        h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; }
+        h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--stanford-red); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        p { margin-bottom: 1.5rem; color: #555; }
+        a { text-decoration: none; color: var(--accent); transition: 0.2s; }
+        a:hover { color: var(--stanford-red); }
+        ul { margin-left: 20px; margin-bottom: 1.5rem; color: #555; }
+        li { margin-bottom: 0.5rem; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 80px 0; }
+        .bg-light { background-color: var(--light-bg); }
+        
+        /* --- HEADER --- */
+        header { padding: 20px 0; border-bottom: 1px solid #eee; background: white; position: sticky; top: 0; z-index: 100; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.1rem; }
+        
+        /* --- HERO --- */
+        .hero { padding: 100px 0; background: radial-gradient(circle at top right, #fdfbfb, #f3f3f3); }
+        .hero h1 { font-size: 3.2rem; color: var(--dark-bg); }
+        .hero-meta { font-size: 1.1rem; font-weight: 700; color: var(--stanford-red); text-transform: uppercase; margin-bottom: 1rem; }
+        .hero-time { font-size: 1rem; color: #555; margin-bottom: 0.5rem; }
+        .btn {
+            display: inline-block;
+            background-color: var(--stanford-red);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 20px;
+            font-size: 1.05rem;
+        }
+        .btn:hover {
+            background-color: #600e0e;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(140, 21, 21, 0.2);
+        }
+
+        /* --- VIDEO CONTAINER --- */
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* --- SPEAKERS GRID --- */
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .speaker-card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px 20px 22px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .speaker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .speaker-role {
+            font-size: 0.8rem;
+            color: var(--stanford-red);
+            text-transform: uppercase;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .speaker-topic {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: block;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+        .speaker-name-row {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+        .speaker-name-row span.tentative {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--mit-gray);
+        }
+
+        .speaker-image {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 2px solid #eee;
+        }
+
+        /* --- ARCHIVE SECTION --- */
+        .archive-section {
+            background-color: #f4f4f4;
+            padding: 60px 0;
+            border-top: 1px solid #ddd;
+        }
+        .archive-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .resource-card {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 4px solid var(--mit-gray);
+        }
+        .resource-card h4 { margin-bottom: 10px; }
+
+        footer {
+            background: var(--dark-bg);
+            color: #888;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.4rem; }
+            .nav-flex { flex-direction: column; align-items: flex-start; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">
+                <strong>Stanford CodeX</strong> | <strong>law.MIT.edu</strong> | <strong>Stanford HAI</strong>
+            </div>
+            <div>
+                <a href="#previous-work" style="font-size: 0.9rem; color: var(--mit-gray);">View Past Events ↓</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero container">
+        <div class="hero-meta">Recent Convening · December 3, 2025</div>
+        <div class="hero-time">🕛 12:00–1:30 PM Pacific · Wednesday</div>
+        <h1>Custom Evals in the Legal Domain</h1>
+        <p style="font-size: 1.15rem; max-width: 800px; color: #333;">
+            A focused, online-first session hosted from Stanford to kick off a 2026
+            research and convening agenda on <strong>custom AI evaluations</strong> for
+            legal teams and other organizations deploying AI
+            systems and AI agents.
+        </p>
+        <p>
+            <strong>📍 Location:</strong> Hosted from Stanford University (Palo Alto) with full virtual participation<br>
+            <strong>🗓 Date:</strong> Wednesday, December 3, 2025<br>
+            <strong>🎥 Status:</strong> Event concluded. Watch the full recording below.
+        </p>
+        
+        <a href="https://forms.gle/bew2BymfMSf6S8zj6" class="btn" target="_blank" rel="noopener noreferrer">
+            Get Updates / Get Involved
+        </a>
+
+        <!-- Video Embed -->
+        <div class="video-responsive">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/mw6yo_Y3FqQ?si=JgCOkw5JHaOu5MZx" title="Custom Evals in the Legal Domain - Event Recording" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Why this kick-off matters</h2>
+            <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <p>
+                        Legal and compliance teams are being asked to sign off on AI
+                        systems and AI agents that operate in high-stakes environments.
+                        Leaderboards and generic benchmarks are not enough. What they
+                        need are <strong>custom evaluations</strong> that reflect real
+                        tasks, risk tolerances, and institutional duties.
+                    </p>
+                </div>
+                <div style="flex: 1; min-width: 300px; background: #f9f9f9; padding: 20px; border-radius: 8px;">
+                    <h3>Looking toward 2026</h3>
+                    <p>
+                        This December 3 session served as a short, high-signal kick-off:
+                        aligning on goals, shared language, and priority use cases.
+                        The work continues in 2026 through a series of focused
+                        research sprints, working groups, and convenings on evaluation
+                        practices for legal AI and agentic systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <h2>The Dec 3 Brain Trust</h2>
+            <p>
+                This initial group helped set the direction for the 2026 agenda,
+                bringing perspectives from legal practice, agent evaluation platforms,
+                consumer protection, and computational law.
+            </p>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <span class="speaker-role">Host & Convenor</span>
+                    <img src="image/image1.jpg" alt="Photo of Dazza Greenwood" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3>Dazza Greenwood</h3>
+                    </div>
+                    <p>law.MIT.edu · Stanford CodeX · Stanford Digital Economy Lab</p>
+                    <span class="speaker-topic">
+                        Opening remarks and framing: why legal teams need custom evals, not just benchmarks.
+                    </span>
+                </div>
+                <div class="speaker-card">
+                    <span class="speaker-role">Legal Domain</span>
+                    <img src="image/image2.jpg" alt="Photo of Tara Waters" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3>Tara Waters</h3>
+                    </div>
+                    <p>Vals AI · TLW Consulting</p>
+                    <span class="speaker-topic">
+                        Reflections on legal AI evaluation work and what matters most to law firms and clients.
+                    </span>
+                </div>
+                <div class="speaker-card">
+                    <span class="speaker-role">Agent Measurement</span>
+                    <img src="image/image3.jpg" alt="Photo of Roman Engeler" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3>Roman Engeler</h3>
+                    </div>
+                    <p>Co-founder & CTO, Atla</p>
+                    <span class="speaker-topic">
+                        Overview of evaluating AI agents and what teams are learning in practice.
+                    </span>
+                </div>
+                <!-- New Darius card starts here -->
+                <div class="speaker-card">
+                    <span class="speaker-role">Agent Eval Infrastructure</span>
+                    <img src="image/image6.jpg" alt="Photo of Darius Emrani" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3>Darius Emrani</h3>
+                    </div>
+                    <p>Founder, Scorecard</p>
+                    <span class="speaker-topic">
+                        Agent evaluation infrastructure for high-stakes legal systems.
+                    </span>
+                </div>
+                <!-- New Darius card ends here -->
+                <div class="speaker-card">
+                    <span class="speaker-role">Fiduciary & Loyalty</span>
+                    <img src="image/image4.jpg" alt="Photo of Dan Leininger" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3>Dan Leininger</h3>
+                    </div>
+                    <p>Consumer Reports Innovation Lab</p>
+                    <span class="speaker-topic">
+                        Early thinking on measuring loyalty and duty-of-care for consumer-facing AI agents.
+                    </span>
+                </div>
+                <div class="speaker-card">
+                    <span class="speaker-role">Computational Law</span>
+                    <img src="image/image5.jpg" alt="Photo of Robert Mahari" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3>Robert Mahari</h3>
+                    </div>
+                    <p>Associate Director, Stanford CodeX</p>
+                    <span class="speaker-topic">
+                        Computational law perspective on how evaluation connects to legal systems, precedent, and governance.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Pre-reads to get up to speed</h2>
+            <p style="max-width: 780px; color: #555;">
+                Quick reads on why custom evaluations matter in law and what practitioners are learning from real-world assessments.
+            </p>
+            <div class="resource-grid" style="margin-top: 20px;">
+                <div class="resource-card">
+                    <h3>Beyond AI Benchmarks</h3>
+                    <p style="margin-bottom: 10px; color: #666;">By Dazza Greenwood · Sep 2025</p>
+                    <p>
+                        Argues that leaders must own “evaluation-as-policy,” turning domain standards into golden datasets and
+                        LLM-judge rubrics so AI systems are measured against what the organization truly values. Introduces the
+                        Lake Merritt open-source workbench and shows how small, expert-labeled eval packs can become a strategic asset,
+                        including process-level checks for agent workflows.
+                    </p>
+                    <a href="https://www.dazzagreenwood.com/p/beyond-ai-benchmarks" target="_blank" rel="noopener noreferrer">Read the post →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Vals Legal AI Report (Feb 2025)</h3>
+                    <p style="margin-bottom: 10px; color: #666;">CoCounsel, Vincent AI, Harvey Assistant, Oliver · 7 legal tasks</p>
+                    <p>
+                        Independent, blind evaluation across seven core legal workflows (from redlining to EDGAR research) benchmarked
+                        against a lawyer control group. Harvey topped five of six tasks it entered, and CoCounsel stayed in the top tier
+                        across its tasks; AI systems collectively beat the lawyer baseline on four document-analysis tasks, with
+                        Document Q&A averaging 80.2%.
+                    </p>
+                    <a href="https://www.vals.ai/industry-reports/vlair-2-27-25" target="_blank" rel="noopener noreferrer">Read the Feb report →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Vals Legal AI Report (Oct 2025)</h3>
+                    <p style="margin-bottom: 10px; color: #666;">Alexi, Counsel Stack, Midpage, ChatGPT · 200 research questions</p>
+                    <p>
+                        Focuses on legal research quality using weighted criteria (accuracy 50%, authoritativeness 40%, appropriateness 10%)
+                        against a lawyer baseline. All AI products clustered at 74–78% overall (lawyers 69%); legal-specialist tools led on
+                        authoritativeness, scoring six points above ChatGPT because of better sourcing and citations.
+                    </p>
+                    <a href="https://www.vals.ai/industry-reports/vlair-10-14-25" target="_blank" rel="noopener noreferrer">Read the Oct report →</a>
+                </div>
+            </div>
+            <p style="margin-top: 20px; color: #555;">More resources will be added over time.</p>
+        </div>
+    </section>
+
+    <section id="previous-work" class="archive-section">
+        <div class="container">
+            <div class="archive-header">
+                <div>
+                    <h2 style="border:none; margin-bottom: 0;">Previous Initiative: AI Agents x Law</h2>
+                    <p style="margin-bottom: 0;"><strong>April 8, 2025 · Stanford FutureLaw Workshop</strong></p>
+                </div>
+                <a href="https://www.dazzagreenwood.com/p/ai-agents-x-law-initiative" target="_blank" style="font-weight: bold;">
+                    View Full Recap & Videos →
+                </a>
+            </div>
+
+            <p>
+                In April 2025, the AI Agents x Law workshop at Stanford FutureLaw explored
+                contract terms for agentic transactions, authenticated delegation, and
+                legal frameworks for AI agents. That work provides important context
+                for this new focus on evaluation.
+            </p>
+
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h4>Key Sessions</h4>
+                    <ul>
+                        <li><strong>Setting the Context:</strong> Dazza Greenwood</li>
+                        <li><strong>Legal Issues for Agents:</strong> Diana Stern</li>
+                        <li><strong>Authenticated Delegation:</strong> Tobin South</li>
+                        <li><strong>Agent Error Handling Demo:</strong> Andor Kesselman (tracking and mitigating agent mistakes)</li>
+                        <li><strong>Legal Practice Innovation:</strong> Damien Riehl</li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h4>Core Readings</h4>
+                    <ul>
+                        <li>
+                            <a href="https://law.stanford.edu/2025/01/14/from-fine-print-to-machine-code-how-ai-agents-are-rewriting-the-rules-of-engagement/"
+                               target="_blank" rel="noopener noreferrer">
+                                From Fine Print to Machine Code
+                            </a>
+                            (Stern & Greenwood)
+                        </li>
+                        <li>
+                            <a href="https://innovation.consumerreports.org/engineering-loyalty-by-design-in-agentic-systems"
+                               target="_blank" rel="noopener noreferrer">
+                                Engineering Loyalty by Design
+                            </a>
+                            (Consumer Reports)
+                        </li>
+                        <li>
+                            <a href="https://arxiv.org/abs/2501.09674"
+                               target="_blank" rel="noopener noreferrer">
+                                Authenticated Delegated Authorizations
+                            </a>
+                            (arXiv)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Content licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). <a href="http://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener noreferrer">View license</a>.</p>
+            <p>Questions about this convening or the 2026 evaluation agenda? Contact Dazza Greenwood.</p>
+            <p><a href="https://github.com/ComputationalLaw/Community" target="_blank" rel="noopener noreferrer">View this site on GitHub</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
