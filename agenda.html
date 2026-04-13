@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda | AI Agents x Law Workshop — April 13, 2026</title>
+    <style>
+        :root {
+            --stanford-red: #8C1515;
+            --accent: #00509e;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f8f9fa;
+            --text-main: #333;
+            --white: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background: var(--white);
+        }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        .header {
+            background: radial-gradient(circle at top right, #fdfbfb, #f3f3f3);
+            padding: 60px 0 40px;
+            border-bottom: 3px solid var(--stanford-red);
+        }
+        .header h1 {
+            font-size: 2.2rem;
+            color: var(--dark-bg);
+            margin-bottom: 0.3rem;
+        }
+        .header .meta {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--stanford-red);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .header .sub {
+            color: #555;
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        /* Agenda items */
+        .agenda { padding: 40px 0 60px; }
+        .agenda-item {
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .agenda-item:last-child { border-bottom: none; }
+        .time {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--stanford-red);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+        .speaker {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark-bg);
+            margin-top: 2px;
+        }
+        .topic {
+            color: #555;
+            margin-top: 2px;
+        }
+
+        /* Interactive exercise highlight */
+        .agenda-item.exercise {
+            background: var(--light-bg);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border-bottom: none;
+        }
+        .agenda-item.exercise .speaker {
+            color: var(--accent);
+        }
+
+        /* Prompt link */
+        .prompt-link {
+            display: inline-block;
+            margin-top: 8px;
+            background: var(--stanford-red);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .prompt-link:hover {
+            background: #600e0e;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.85rem;
+        }
+        .footer a { color: var(--accent); text-decoration: none; }
+        .footer a:hover { color: var(--stanford-red); }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="container">
+            <div class="meta">Stanford FutureLaw 2026</div>
+            <h1>AI Agents x Law Workshop</h1>
+            <div class="sub">Monday, April 13, 2026 &middot; 1:30&ndash;4:30 PM Pacific &middot; Stanford Law School, Room 270</div>
+        </div>
+    </div>
+
+    <div class="container agenda">
+
+        <div class="agenda-item">
+            <div class="time">1:30 PM</div>
+            <div class="speaker">Dazza Greenwood</div>
+            <div class="topic">Welcome and workshop framing</div>
+        </div>
+
+        <div class="agenda-item exercise">
+            <div class="time">1:40 PM</div>
+            <div class="speaker">HANDS-ON EXERCISE</div>
+            <div class="topic">Agent platform introduction and agent onboarding</div>
+            <a href="prompt1.html" class="prompt-link">Give your agent Prompt 1 &rarr;</a>
+        </div>
+
+        <div class="agenda-item">
+            <div class="time">1:50 PM</div>
+            <div class="speaker">Richard Tromans</div>
+            <div class="topic">What is an AI-Native Law Firm?</div>
+        </div>
+
+        <div class="agenda-item">
+            <div class="time">2:00 PM</div>
+            <div class="speaker">Zack Shapiro</div>
+            <div class="topic">The Claude-Native Law Firm</div>
+        </div>
+
+        <div class="agenda-item">
+            <div class="time">2:10 PM</div>
+            <div class="speaker">Helen Fan</div>
+            <div class="topic">Building AI-native law firms with agents</div>
+        </div>
+
+        <div class="agenda-item">
+            <div class="time">2:20 PM</div>
+            <div class="speaker">Robert Mahari</div>
+            <div class="topic">AI agents, law, and computational law</div>
+        </div>
+
+        <div class="agenda-item">
+            <div class="time">2:30 PM</div>
+            <div class="speaker">Nima Mohebbi</div>
+            <div class="topic">California proposed rules for generative AI in law practice</div>
+        </div>
+
+        <div class="agenda-item exercise">
+            <div class="time">2:40 PM</div>
+            <div class="speaker">PARTICIPANT Q&amp;A</div>
+            <div class="topic">Participant Q&amp;A and facilitated discussion</div>
+        </div>
+
+        <div class="agenda-item exercise">
+            <div class="time">2:50 PM</div>
+            <div class="speaker">HANDS-ON EXERCISE</div>
+            <div class="topic">Agent setup support and live platform check-in</div>
+        </div>
+
+        <div class="agenda-item exercise">
+            <div class="time">3:00 PM</div>
+            <div class="speaker">AI AGENT PARTICIPATORY DEMO: PART I</div>
+            <div class="topic">Live topic proposal and voting with participant agents</div>
+            <a href="prompt2.html" class="prompt-link">Give your agent Prompt 2 &rarr;</a>
+        </div>
+
+        <div class="agenda-item">
+            <div class="time">3:05 PM</div>
+            <div class="speaker">Kyle Bahr</div>
+            <div class="topic">Quick skills demo: how agents use the SKILL file to propose and vote</div>
+        </div>
+
+        <div class="agenda-item">
+            <div class="time">3:15 PM</div>
+            <div class="speaker">Olga Mack</div>
+            <div class="topic">Contracts Are Systems. Agents Are Actors: Managing the Shift from Documents to Dynamic Legal Systems</div>
+        </div>
+
+        <div class="agenda-item exercise">
+            <div class="time">3:35 PM</div>
+            <div class="speaker">AI AGENT PARTICIPATORY DEMO: PART II</div>
+            <div class="topic">Collaborative AI agent discussion across top-voted topics</div>
+            <a href="prompt3.html" class="prompt-link">Give your agent Prompt 3 &rarr;</a>
+        </div>
+
+        <div class="agenda-item exercise">
+            <div class="time">3:50 PM</div>
+            <div class="speaker">GROUP REFLECTION</div>
+            <div class="topic">Report-outs and group reflections from the collaborative AI agent session</div>
+        </div>
+
+        <div class="agenda-item">
+            <div class="time">4:00 PM</div>
+            <div class="speaker">Damien Riehl</div>
+            <div class="topic">The Agentic Spectrum: Shipping Outcomes, Not Architectures</div>
+        </div>
+
+        <div class="agenda-item">
+            <div class="time">4:15 PM</div>
+            <div class="speaker">Bryan Wilson</div>
+            <div class="topic">Computational Law Report announcement</div>
+        </div>
+
+        <div class="agenda-item">
+            <div class="time">4:20 PM</div>
+            <div class="speaker">Matt Pollins</div>
+            <div class="topic">The Rise of Vibe Coding and AI-Native Law Firms (Prerecorded)</div>
+        </div>
+
+        <div class="agenda-item">
+            <div class="time">4:25 PM</div>
+            <div class="speaker">Dazza Greenwood</div>
+            <div class="topic">Closing reflections, next steps, and community resources</div>
+        </div>
+
+        <div class="agenda-item">
+            <div class="time">4:30 PM</div>
+            <div class="speaker">END</div>
+            <div class="topic">Workshop concludes</div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <a href="https://computationallaw.org">computationallaw.org</a> &middot; Hosted by CodeX &mdash; The Stanford Center for Legal Informatics
+    </div>
+
+</body>
+</html>
