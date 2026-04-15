@@ -7,16 +7,16 @@
 
     <!-- Open Graph / LinkedIn Preview -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="AI Agents x Law: Hands-On Workshop | Stanford FutureLaw 2026">
-    <meta property="og:description" content="Monday, April 13 · 1:30–4:30 PM Pacific · Stanford Law School. Hands-on workshop with AI agents for legal and professional work. Hosted by CodeX. Space is limited — request an invitation.">
+    <meta property="og:title" content="AI Agents x Law: Hands-On Workshop Recap | Stanford FutureLaw 2026">
+    <meta property="og:description" content="April 13, 2026 · Stanford Law School. 60 humans, 60 agents, one shared room — 25 topics proposed, 8 working papers co-authored together in real time. The next event is online and at scale, in affiliation with law.MIT.edu.">
     <meta property="og:url" content="https://computationallaw.org">
     <meta property="og:image" content="https://computationallaw.org/image/headshot-dazza.jpg">
     <meta property="og:site_name" content="ComputationalLaw.org">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Agents x Law: Hands-On Workshop | Stanford FutureLaw 2026">
-    <meta name="twitter:description" content="Monday, April 13 · Stanford Law School. Hands-on AI agents workshop hosted by CodeX. Request an invitation.">
+    <meta name="twitter:title" content="AI Agents x Law: Hands-On Workshop Recap | Stanford FutureLaw 2026">
+    <meta name="twitter:description" content="April 13, 2026 · Stanford. 60 humans, 60 agents, 8 co-authored papers. Next event online and at scale — interlateral.com.">
     <meta name="twitter:image" content="https://computationallaw.org/image/headshot-dazza.jpg">
     <style>
         /* --- CSS VARIABLES & RESET --- */
@@ -68,6 +68,92 @@
             border-radius: 4px;
             margin-left: 12px;
             vertical-align: middle;
+        }
+
+        /* --- POST-EVENT RECAP BANNER --- */
+        .recap-banner {
+            padding: 60px 0 50px;
+            background: linear-gradient(180deg, #1a1a1a 0%, #262626 100%);
+            color: #fff;
+            border-bottom: 4px solid var(--stanford-red);
+        }
+        .recap-badge {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #fff;
+            background: var(--stanford-red);
+            padding: 6px 14px;
+            border-radius: 4px;
+            margin-bottom: 22px;
+        }
+        .recap-headline {
+            font-size: 2.6rem;
+            line-height: 1.15;
+            color: #fff;
+            margin-bottom: 14px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            max-width: 880px;
+        }
+        .recap-stats {
+            font-size: 1.05rem;
+            color: #d8d8d8;
+            margin-bottom: 22px;
+            max-width: 820px;
+        }
+        .recap-lede {
+            font-size: 1rem;
+            color: #c0c0c0;
+            margin-bottom: 30px;
+            max-width: 820px;
+            line-height: 1.65;
+        }
+        .recap-lede strong { color: #fff; }
+        .recap-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+        .btn-primary-recap {
+            background-color: var(--stanford-red);
+            color: #fff;
+            padding: 14px 30px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 0;
+            display: inline-block;
+        }
+        .btn-primary-recap:hover {
+            background-color: #600e0e;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .btn-secondary-recap {
+            background-color: transparent;
+            color: #fff;
+            border: 1.5px solid #888;
+            padding: 12.5px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 0;
+            display: inline-block;
+        }
+        .btn-secondary-recap:hover {
+            background-color: #fff;
+            color: var(--dark-bg);
+            border-color: #fff;
+        }
+        .recap-footnote {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 0;
+            font-style: italic;
         }
 
         /* --- HERO --- */
@@ -372,6 +458,35 @@
         </div>
     </header>
 
+    <!-- ==================== POST-EVENT RECAP BANNER ==================== -->
+    <section class="recap-banner">
+        <div class="container">
+            <div class="recap-badge">&#10003; Workshop Complete &middot; April 13, 2026 &middot; Stanford Law School</div>
+            <h1 class="recap-headline">60 humans, 60 agents, one shared room.</h1>
+            <p class="recap-stats">
+                25 discussion topics proposed &middot; 8 working papers co-authored together, in real time &middot;
+                Multi-agent collaboration across firms, practice areas, and jurisdictions.
+            </p>
+            <p class="recap-lede">
+                The hands-on workshop is complete. Edited recording, slides, prompts, and the
+                full collaborative output are being packaged for release. The next AI Agents x Law
+                event will be online and at scale, in affiliation with <strong>law.MIT.edu</strong>
+                &mdash; with curated participation tiers so the signal stays high.
+            </p>
+            <div class="recap-cta-row">
+                <a href="https://interlateral.com/" class="btn btn-primary-recap" target="_blank" rel="noopener noreferrer">
+                    Join the Next Event &rarr;
+                </a>
+                <a href="https://forms.gle/TJ2fxWBwSgyU3c2y6" class="btn btn-secondary-recap" target="_blank" rel="noopener noreferrer">
+                    Stay Updated &rarr;
+                </a>
+            </div>
+            <p class="recap-footnote">
+                Join the list to receive updates and to request invitation to upcoming events.
+            </p>
+        </div>
+    </section>
+
     <!-- ==================== HERO ==================== -->
     <section class="hero">
         <div class="container">
@@ -392,24 +507,27 @@
             </div>
 
             <div class="reg-steps" style="max-width: 700px;">
-                <h3 style="margin-bottom: 18px; color: var(--dark-bg);">Request an Invitation</h3>
+                <h3 style="margin-bottom: 18px; color: var(--dark-bg);">This Workshop Is Complete</h3>
                 <div class="reg-step">
                     <div class="reg-step-content">
-                        <p>Complete the Stanford Law registration form to request an invitation. This is required for all attendees.</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScAQvhfTRdYGizN-ODgzVsOHRVVRUpouBfC7BPHRGQu2EkqmQ/viewform?usp=dialog"
-                           class="btn" target="_blank" rel="noopener noreferrer" style="margin-top: 8px; padding: 12px 28px; font-size: 0.95rem;">
-                            Register &amp; Request Invitation &rarr;
+                        <p>The April 13 workshop reached capacity and ran on schedule. Materials, recording,
+                        and the full collaborative output are being packaged for release. The next event will
+                        be online and at scale, in affiliation with law.MIT.edu.</p>
+                        <a href="https://interlateral.com/" class="btn"
+                           target="_blank" rel="noopener noreferrer"
+                           style="margin-top: 8px; padding: 12px 28px; font-size: 0.95rem;">
+                            Join the Next Event at Interlateral.com &rarr;
                         </a>
                     </div>
                 </div>
                 <p style="margin-top: 16px; margin-bottom: 0; font-size: 0.9rem; color: var(--mit-gray); font-style: italic;">
-                    Accepted participants will have access to pre-reading, setup walkthroughs, and live teach-in sessions to help get a supported AI agent running before the workshop.
+                    Participants had access to pre-reading, setup walkthroughs, and live teach-in sessions to get supported AI agents running before the workshop.
                 </p>
                 <p style="margin-top: 12px; margin-bottom: 0; font-size: 0.85rem;">
                     <a href="https://law.stanford.edu/event/ai-agents-x-law-hands-on-workshop-and-live-participatory-demo/"
                        target="_blank" rel="noopener noreferrer"
                        style="color: var(--mit-gray); text-decoration: none; border-bottom: 1px solid #ccc;">
-                        View on Stanford Law School &rarr;
+                        View original event listing on Stanford Law School &rarr;
                     </a>
                 </p>
             </div>
