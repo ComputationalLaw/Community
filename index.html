@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Agents x Law: Hands-On Workshop | Stanford FutureLaw 2026</title>
+    <title>law.MIT.edu 2026 Summer Intensive | ComputationalLaw.org</title>
 
     <!-- Open Graph / LinkedIn Preview -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="AI Agents x Law: Hands-On Workshop Recap | Stanford FutureLaw 2026">
-    <meta property="og:description" content="April 13, 2026 · Stanford Law School. 45 humans, 45 agents, one shared room — 25 topics proposed, 8 breakout group discussion papers co-authored together in real time. The next event is online and at scale, in affiliation with law.MIT.edu.">
+    <meta property="og:title" content="law.MIT.edu 2026 Summer Intensive | ComputationalLaw.org">
+    <meta property="og:description" content="Thursday, August 20, 2026 · 12:00 PM Pacific. A free online educational workshop on AI agents and law, with expert talks, hands-on exercises, and optional Interlateral collaboration sessions.">
     <meta property="og:url" content="https://computationallaw.org">
     <meta property="og:image" content="https://computationallaw.org/image/headshot-dazza.jpg">
     <meta property="og:site_name" content="ComputationalLaw.org">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Agents x Law: Hands-On Workshop Recap | Stanford FutureLaw 2026">
-    <meta name="twitter:description" content="April 13, 2026 · Stanford. 45 humans, 45 agents, 8 co-authored papers. Next event online and at scale — interlateral.com.">
+    <meta name="twitter:title" content="law.MIT.edu 2026 Summer Intensive | ComputationalLaw.org">
+    <meta name="twitter:description" content="August 20, 2026 · 12:00 PM Pacific. AI agents and law, hands-on exercises, and optional Interlateral collaboration sessions.">
     <meta name="twitter:image" content="https://computationallaw.org/image/headshot-dazza.jpg">
     <style>
         /* --- CSS VARIABLES & RESET --- */
@@ -51,6 +51,126 @@
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
         .section { padding: 80px 0; }
         .bg-light { background-color: var(--light-bg); }
+
+        /* --- CURRENT SUMMER INTENSIVE --- */
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        .nav-links a {
+            font-size: 0.9rem;
+            color: var(--mit-gray);
+            font-weight: 600;
+        }
+        .summer-hero {
+            padding: 72px 0 56px;
+            background: linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
+            border-bottom: 1px solid #e7e7e7;
+        }
+        .summer-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+            gap: 36px;
+            align-items: start;
+        }
+        .summer-kicker {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--stanford-red);
+            background: #f7eaea;
+            border: 1px solid #e4c2c2;
+            padding: 6px 12px;
+            border-radius: 4px;
+            margin-bottom: 18px;
+        }
+        .summer-hero h1 {
+            font-size: 3rem;
+            color: var(--dark-bg);
+            margin-bottom: 14px;
+        }
+        .summer-lede {
+            font-size: 1.15rem;
+            max-width: 760px;
+            color: #333;
+            margin-bottom: 22px;
+        }
+        .summer-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 12px;
+            margin: 24px 0 8px;
+            max-width: 760px;
+        }
+        .summer-meta div {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-left: 4px solid var(--stanford-red);
+            border-radius: 6px;
+            padding: 12px 14px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .summer-meta strong {
+            display: block;
+            color: var(--dark-bg);
+            margin-bottom: 2px;
+        }
+        .summer-panel {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+        }
+        .summer-hero-image {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+            margin-bottom: 18px;
+        }
+        .summer-panel h3 {
+            color: var(--dark-bg);
+            margin-bottom: 12px;
+        }
+        .summer-panel ul {
+            margin-bottom: 0;
+        }
+        .summer-tag {
+            display: inline-block;
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: var(--accent);
+            background: #e9f2fb;
+            border-radius: 4px;
+            padding: 4px 8px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .current-note {
+            background: #fff;
+            border: 1px solid #e7e7e7;
+            border-left: 4px solid var(--accent);
+            border-radius: 6px;
+            padding: 20px 24px;
+            margin-top: 24px;
+            max-width: 820px;
+        }
+        .current-note p {
+            margin-bottom: 0;
+        }
+        .previous-events-intro {
+            padding: 54px 0 34px;
+            background: #f4f4f4;
+            border-top: 1px solid #e0e0e0;
+        }
 
         /* --- HEADER --- */
         header { padding: 20px 0; border-bottom: 1px solid #eee; background: white; position: sticky; top: 0; z-index: 100; }
@@ -435,6 +555,9 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .nav-flex { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .nav-links { justify-content: flex-start; gap: 12px; }
+            .summer-grid { grid-template-columns: 1fr; gap: 24px; }
+            .summer-hero h1 { font-size: 2.2rem; }
             .hero-facts { flex-direction: column; gap: 4px; }
             .btn-secondary { margin-left: 0; }
             .agenda-item { flex-direction: column; gap: 4px; }
@@ -449,14 +572,417 @@
     <header>
         <div class="container nav-flex">
             <div class="logo">
-                <strong>Stanford CodeX</strong> | <strong>law.MIT.edu</strong>
-                <span class="futurelaw-badge">FutureLaw Week 2026</span>
+                <strong>ComputationalLaw.org</strong> | <strong>law.MIT.edu</strong>
+                <span class="futurelaw-badge">Summer Intensive 2026</span>
             </div>
-            <div>
-                <a href="#previous-events" style="font-size: 0.9rem; color: var(--mit-gray);">View Past Events &#8595;</a>
+            <div class="nav-links">
+                <a href="#program">Program</a>
+                <a href="#interactive-session">Interactive Session</a>
+                <a href="#previous-events">Previous Events</a>
             </div>
         </div>
     </header>
+
+    <!-- ==================== CURRENT EVENT: SUMMER INTENSIVE ==================== -->
+    <section class="summer-hero">
+        <div class="container summer-grid">
+            <div>
+                <div class="summer-kicker">Current Program &middot; Thursday, August 20, 2026</div>
+                <h1>law.MIT.edu 2026 Summer Intensive</h1>
+                <p class="summer-lede">
+                    A free online educational workshop on the profound changes happening now with
+                    artificial intelligence in law, combining expert discussion, practical teaching,
+                    hands-on exercises, and optional agent-to-agent collaboration.
+                </p>
+                <div class="summer-meta">
+                    <div><strong>Date</strong>Thursday, August 20, 2026</div>
+                    <div><strong>Main Program</strong>12:00&ndash;2:00 PM Pacific</div>
+                    <div><strong>Optional Team-Based Sessions</strong>2:00&ndash;4:00 PM Pacific</div>
+                    <div><strong>Unconference Format</strong>Request an invitation</div>
+                </div>
+                <div class="recap-cta-row">
+                    <a href="https://docs.google.com/forms/d/1pvQAKZ-iW-6D2_pMmwWUeOTCUh_2pLKP0gtsL0tRGTE/" class="btn" target="_blank" rel="noopener noreferrer">
+                        Register to Attend &rarr;
+                    </a>
+                    <a href="#interactive-session" class="btn-secondary">
+                        Special Interactive Session &darr;
+                    </a>
+                </div>
+                <p style="font-size: 0.9rem; color: var(--mit-gray); margin-bottom: 0;">
+                    Sign up for updates, participation details, and team-based session invitation information.
+                </p>
+            </div>
+            <aside class="summer-panel">
+                <img src="image/law-mit-summer-intensive-2026.jpg" alt="The 2026 law.MIT.edu Summer Intensive starts Thursday, August 20, 12pm Pacific and 3pm Eastern" class="summer-hero-image">
+                <span class="summer-tag">At a glance</span>
+                <h3>AI Agents x Law, in practice</h3>
+                <ul>
+                    <li>Keynote and future-of-law framing from leading AI and computational law thinkers.</li>
+                    <li>Hands-on work with Claude Code, Codex, and similar agent systems.</li>
+                    <li>Practical examples of lawyers turning advice, workflows, and collaboration into interactive systems.</li>
+                    <li>Optional <a href="https://interlateral.com/" target="_blank" rel="noopener noreferrer">Interlateral collaboration rooms</a> where participants and agents can form teams and practice how to collaboratively produce shared outputs.</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <!-- ==================== DESCRIPTION / REQUEST ==================== -->
+    <section id="request-attend" class="section">
+        <div class="container">
+            <h2>About the Summer Intensive</h2>
+            <p style="max-width: 820px;">
+                The law.MIT.edu 2026 Summer Intensive is designed for lawyers, legal innovators,
+                technologists, students, researchers, and community builders who want practical
+                experience with modern AI agent systems in legal and professional work.
+            </p>
+            <p style="max-width: 820px;">
+                The session moves from framing to practice: what is changing, what lawyers need
+                to understand, how agents can support real work, and how communities can use
+                shared online rooms to propose ideas, form teams, and build outputs together.
+            </p>
+            <div class="current-note">
+                <p>
+                    We are delighted to welcome the new law.MIT.edu Summer Intensive Teaching Assistant
+                    <a href="https://www.linkedin.com/in/lakshitabhargava/" target="_blank" rel="noopener noreferrer">Lakshita Bhargava</a>.
+                    Lakshita is currently a graduate student at the University of California, Berkeley, School of Law
+                    in the Master of Laws LL.M., AI Governance program.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CURRENT PROGRAM ==================== -->
+    <section id="program" class="section bg-light">
+        <div class="container">
+            <h2>Program and Speakers</h2>
+            <p style="max-width: 820px;">
+                Planned speakers and high-level topics are below. Specific session details may be updated as the
+                Summer Intensive approaches.
+            </p>
+
+            <div class="agenda-list" style="max-width: 860px;">
+                <div class="agenda-item">
+                    <div class="agenda-time">12:00 PM</div>
+                    <div class="agenda-detail"><strong>Welcome and Overview</strong> &mdash; Dazza Greenwood</div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-time">12:15 PM</div>
+                    <div class="agenda-detail"><strong>Keynote</strong> &mdash; Sandy Pentland</div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-time">12:30 PM</div>
+                    <div class="agenda-detail"><strong>The Future of AI and Law</strong> &mdash; Roland Vogl</div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-time">12:45 PM</div>
+                    <div class="agenda-detail"><strong>Hands-On: Claude Code, Codex, and Agent Skills</strong> &mdash; Matt Pollins</div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-time">1:20 PM</div>
+                    <div class="agenda-detail"><strong>HTMLaw: Building Better Client Communications Through Code</strong> &mdash; Dan Sito</div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-time">1:40 PM</div>
+                    <div class="agenda-detail"><strong>Role Models</strong> &mdash; Examples of the new manner of law practice: Alexis Werth and Emily Cabrera</div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-time">1:55 PM</div>
+                    <div class="agenda-detail"><strong>Wrap Up and Next Steps</strong> &mdash; Dazza Greenwood</div>
+                </div>
+                <div class="agenda-item">
+                    <div class="agenda-time">2:00 PM</div>
+                    <div class="agenda-detail"><strong>Main Program Closes</strong></div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 42px; margin-bottom: 16px;">Speakers and Session Leaders</h3>
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <span class="speaker-role">Host &amp; Facilitator</span>
+                    <img src="image/image1.jpg" alt="Photo of Dazza Greenwood" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3><a href="https://www.linkedin.com/in/dazzagreenwood/" target="_blank" rel="noopener noreferrer">Dazza Greenwood</a></h3>
+                    </div>
+                    <p>law.MIT.edu &middot; CIVICS.com</p>
+                    <span class="speaker-topic">Welcome, workshop framing, overview of the current transformation, and next steps.</span>
+                </div>
+                <div class="speaker-card">
+                    <span class="speaker-role">Keynote</span>
+                    <img src="image/image-16-sandy.jpeg" alt="Photo of Sandy Pentland" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3><a href="https://www.linkedin.com/in/alexsandypentland/" target="_blank" rel="noopener noreferrer">Sandy Pentland</a></h3>
+                    </div>
+                    <p>MIT</p>
+                    <span class="speaker-topic">Keynote session for the Summer Intensive.</span>
+                </div>
+                <div class="speaker-card">
+                    <span class="speaker-role">Featured Speaker</span>
+                    <img src="image/image-17-roland.jpeg" alt="Photo of Roland Vogl" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3><a href="https://www.linkedin.com/in/rolandvogl/" target="_blank" rel="noopener noreferrer">Roland Vogl</a></h3>
+                    </div>
+                    <p>Stanford CodeX</p>
+                    <span class="speaker-topic">The future of AI, law, and computational legal practice.</span>
+                </div>
+                <div class="speaker-card">
+                    <span class="speaker-role">Hands-On Session</span>
+                    <img src="image/image-8-matt.jpg" alt="Photo of Matt Pollins" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3><a href="https://www.linkedin.com/in/pollins/" target="_blank" rel="noopener noreferrer">Matt Pollins</a></h3>
+                    </div>
+                    <p>Agents.law</p>
+                    <span class="speaker-topic">Claude Code, Codex, agent skills, and practical agent workflows.</span>
+                </div>
+                <div class="speaker-card">
+                    <span class="speaker-role">Hands-On Project</span>
+                    <img src="image/image-18-sito.png" alt="Photo of Dan Sito" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3><a href="https://www.linkedin.com/in/daniel-sito/" target="_blank" rel="noopener noreferrer">Dan Sito</a></h3>
+                    </div>
+                    <p>General Legal &middot; LegalQuants</p>
+                    <span class="speaker-topic">HTMLaw: Building Better Client Communications Through Code.</span>
+                </div>
+                <div class="speaker-card">
+                    <span class="speaker-role">Role Model</span>
+                    <img src="image/image-19-alexis.jpeg" alt="Photo of Alexis Werth" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3><a href="https://www.linkedin.com/in/alexis-werth-80496b30/" target="_blank" rel="noopener noreferrer">Alexis Werth</a></h3>
+                    </div>
+                    <p>Legal Quants</p>
+                    <span class="speaker-topic">Examples of the new manner of law practice and hands-on legal innovation.</span>
+                </div>
+                <div class="speaker-card">
+                    <span class="speaker-role">Role Model</span>
+                    <img src="image/image-20-emily.jpeg" alt="Photo of Emily Cabrera" class="speaker-image">
+                    <div class="speaker-name-row">
+                        <h3><a href="https://www.linkedin.com/in/emily-cabrera-cna/" target="_blank" rel="noopener noreferrer">Emily Cabrera</a></h3>
+                    </div>
+                    <p>Legal Quants</p>
+                    <span class="speaker-topic">Examples of accessible, practical, agent-supported <a href="https://www.linkedin.com/posts/emily-cabrera-cna_a-nice-surprise-this-week-i-was-honored-ugcPost-7490841035787415552-fzyJ/?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAAALeQBCcb62rtvHMitEOiBE75yZunCtk0" target="_blank" rel="noopener noreferrer">innovative legal work</a>.</span>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 42px; margin-bottom: 10px;">Background Reading</h3>
+            <p>
+                Recommended background reading to get the most out of the Summer Intensive.
+                Not required, but helpful context for the hands-on exercises and discussions.
+            </p>
+
+            <h4 style="margin-bottom: 12px; margin-top: 20px; color: var(--dark-bg);">Recommended Reading</h4>
+            <div class="resource-grid" style="margin-top: 10px; margin-bottom: 30px;">
+                <div class="resource-card" style="border-left-color: var(--stanford-red);">
+                    <h4>Authority Boundaries for AI</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">By Dazza Greenwood &middot; Aug 2026</p>
+                    <p style="font-size: 0.9rem;">
+                        As agent systems become more capable, the central design question is no longer just
+                        whether a human is in the loop. It is how the system defines what an agent may do,
+                        what a lawyer or professional must decide, what requires verification or approval,
+                        what must be logged, and what must be refused. These authority boundaries are becoming
+                        the architecture of professional judgment itself, and in the post-transformation age
+                        of AI agents they will literally help define what people pay you for.
+                    </p>
+                    <a href="https://www.dazzagreenwood.com/p/authority-boundaries-for-ai" target="_blank" rel="noopener noreferrer">Read &rarr;</a>
+                </div>
+                <div class="resource-card" style="border-left-color: var(--stanford-red);">
+                    <h4>How To Train Your Agent</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">By Matt Pollins (Agents.law) &middot; Jan 2026</p>
+                    <p style="font-size: 0.9rem;">
+                        How Skills &mdash; folders of instructions and reference materials &mdash; transform AI agents from
+                        generalists into specialists for legal tasks. A practical look at capturing institutional
+                        knowledge and making tacit expertise reusable. By one of our workshop speakers.
+                    </p>
+                    <a href="https://www.agents.law/p/how-to-train-your-agent" target="_blank" rel="noopener noreferrer">Read &rarr;</a>
+                </div>
+                <div class="resource-card" style="border-left-color: var(--stanford-red);">
+                    <h4>Building AI-Native Professional Services Firms</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">By Daniel Martin Katz, Michael J. Bommarito II &amp; Jillian Bommarito &middot; 273 Ventures</p>
+                    <p style="font-size: 0.9rem;">
+                        A comprehensive guide to strategy, economics, and execution for firms building on AI
+                        as foundational infrastructure. Covers organizational design, technology strategy, talent,
+                        and regulatory considerations. New chapters released weekly &mdash; relevant to AI-native
+                        law firms and other AI-native professional services firms.
+                    </p>
+                    <a href="https://theainativefirm.com/" target="_blank" rel="noopener noreferrer">Read &rarr;</a>
+                </div>
+            </div>
+
+            <h4 style="margin-bottom: 12px; color: var(--dark-bg);">More Reading</h4>
+            <div class="resource-grid" style="margin-top: 10px;">
+                <div class="resource-card">
+                    <h4>The Claude-Native Law Firm</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">Zack Shapiro &middot; via X/Twitter</p>
+                    <p style="font-size: 0.9rem;">
+                        A look at what it means to build a law firm around Claude as the core operating layer &mdash;
+                        not as an add-on tool but as the foundation of how the firm works.
+                        By one of our workshop speakers.
+                    </p>
+                    <a href="https://x.com/zackbshapiro/status/2027389987444957625" target="_blank" rel="noopener noreferrer">Read &rarr;</a>
+                </div>
+                <div class="resource-card">
+                    <h4>How Do AI-Native Law Firms Work?</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">Artificial Lawyer &middot; Mar 31, 2026</p>
+                    <a href="https://www.artificiallawyer.com/2026/03/31/how-do-ai-native-law-firms-work/" target="_blank" rel="noopener noreferrer">Read &rarr;</a>
+                </div>
+                <div class="resource-card">
+                    <h4>AI-Native Law Firm Directory Launches</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">Artificial Lawyer &middot; Mar 30, 2026</p>
+                    <a href="https://www.artificiallawyer.com/2026/03/30/ai-native-law-firm-directory-launches/" target="_blank" rel="noopener noreferrer">Read &rarr;</a>
+                </div>
+                <div class="resource-card">
+                    <h4>The Three Legal AI Models for Law Firms</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">Artificial Lawyer &middot; Dec 16, 2025</p>
+                    <a href="https://www.artificiallawyer.com/2025/12/16/the-three-legal-ai-models-for-law-firms/" target="_blank" rel="noopener noreferrer">Read &rarr;</a>
+                </div>
+                <div class="resource-card">
+                    <h4>The New Model Army Has Arrived</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">Artificial Lawyer &middot; Nov 24, 2025</p>
+                    <a href="https://www.artificiallawyer.com/2025/11/24/the-new-model-army-has-arrived/" target="_blank" rel="noopener noreferrer">Read &rarr;</a>
+                </div>
+                <div class="resource-card">
+                    <h4>Autopilots Can Absorb $60bn of Legal Work &mdash; Sequoia</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">Artificial Lawyer &middot; Mar 30, 2026</p>
+                    <a href="https://www.artificiallawyer.com/2026/03/30/autopilots-can-absorb-60bn-of-legal-work-sequoia/" target="_blank" rel="noopener noreferrer">Read &rarr;</a>
+                </div>
+                <div class="resource-card" style="border-left-color: var(--stanford-red);">
+                    <h4>California Proposes AI Amendments to Rules of Professional Conduct</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">State Bar of California &middot; Public Comment Open Through May 4, 2026</p>
+                    <p style="font-size: 0.9rem;">
+                        Proposed amendments to six existing ethics rules (competence, client communication,
+                        confidentiality, candor to tribunals, and supervision) to clarify that traditional
+                        professional duties apply when lawyers use generative AI and AI agents. Not new rules &mdash;
+                        targeted clarifications making explicit what competent, ethical practice already requires.
+                        Directly relevant to anyone using AI agents in legal work.
+                    </p>
+                    <a href="https://www.calbar.ca.gov/public/public-meetings-comment/public-comment/public-comment-archives/2026-public-comment/proposed-amendments-rules-professional-conduct-related-artificial-intelligence" target="_blank" rel="noopener noreferrer">Read the Proposal &rarr;</a>
+                </div>
+                <div class="resource-card" style="border-left-color: var(--accent);">
+                    <h4>AI Agent ID: Identity, Delegation, and Accountability for Autonomous Agents</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">By Dazza Greenwood &middot; Nov 2025</p>
+                    <p style="font-size: 0.9rem;">
+                        As AI agents move from experiments into production, who are they acting as &mdash; and who is accountable?
+                        Introduces an OpenID Foundation whitepaper addressing authentication, authorization, and delegation
+                        for autonomous agents operating across organizational boundaries. Directly relevant to
+                        the workshop&rsquo;s focus on multi-agent collaboration and the Interlateral demo.
+                    </p>
+                    <a href="https://www.dazzagreenwood.com/p/ai-agent-id" target="_blank" rel="noopener noreferrer">Read &rarr;</a>
+                </div>
+                <div class="resource-card">
+                    <h4>Various Posts on AI Agents: A Grounding Collection</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">By Dazza Greenwood &middot; May 2025</p>
+                    <p style="font-size: 0.9rem;">
+                        A curated set of posts covering how AI agents are reshaping transactional systems and legal
+                        frameworks &mdash; from agency law and loyalty obligations to Agent-to-Agent protocols and error
+                        handling. Good starting point for anyone new to the topic or looking for broader context
+                        before the workshop.
+                    </p>
+                    <a href="https://www.dazzagreenwood.com/p/recent-posts-on-ai-agents" target="_blank" rel="noopener noreferrer">Read &rarr;</a>
+                </div>
+                <div class="resource-card">
+                    <h4>Agent Skills Hub for Law</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">Lawvable</p>
+                    <p style="font-size: 0.9rem;">
+                        Discover reusable AI automations built by legal experts. Use them instantly
+                        in your favorite AI assistant. A growing library of ready-made agent skills for legal work.
+                    </p>
+                    <a href="https://www.lawvable.com/en" target="_blank" rel="noopener noreferrer">Explore &rarr;</a>
+                </div>
+                <div class="resource-card">
+                    <h4>Making Legal Skills: Setting Up Claude Cowork</h4>
+                    <p style="margin-bottom: 8px; color: #666; font-size: 0.85rem;">By Kyle Bahr &middot; LinkedIn</p>
+                    <p style="font-size: 0.9rem;">
+                        A practical walkthrough of setting up Claude Cowork with custom skills, memory files,
+                        and activity logs &mdash; using complementary AI tools together rather than as competitors.
+                        Useful prep for workshop participants getting their agents ready.
+                    </p>
+                    <a href="https://www.linkedin.com/posts/kyle-bahr_claude-cowork-perplexity-activity-7445137478241619969-GCqs" target="_blank" rel="noopener noreferrer">Read &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SPECIAL INTERACTIVE SESSION ==================== -->
+    <section id="interactive-session" class="section">
+        <div class="container">
+            <h2>Special Interactive Agent Session</h2>
+            <p style="max-width: 820px;">
+                Participants may also apply to request an invitation to a special live interactive
+                and agent-to-agent collaboration session after the main program. This is where
+                participants can bring Claude Code, Codex, or a comparable agent into Interlateral
+                collaboration rooms to form teams, test workflows, and learn how to produce shared outputs.
+            </p>
+            <div class="current-note">
+                <p>
+                    The team-based sessions will follow an <strong>unconference format</strong>:
+                    invited participants can propose topics, form teams, and work with their own agents
+                    in shared Interlateral rooms. The request-for-invitation application will open on
+                    <strong>Monday, August 10, 2026</strong>.
+                </p>
+            </div>
+            <p style="max-width: 820px; margin-top: 24px;">
+                Team-based projects may be considered for inclusion in the upcoming <strong>AI Agents x Law</strong>
+                initial publication of the new Stanford Computational Law Report.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== HOW TO PARTICIPATE ==================== -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2>How to Participate</h2>
+            <div class="reg-steps" style="max-width: 820px;">
+                <div class="reg-step">
+                    <div class="reg-step-num">1</div>
+                    <div class="reg-step-content">
+                        <h4>Main program</h4>
+                        <p>12:00&ndash;2:00 PM Pacific: talks, demonstrations, and hands-on exercises with the speakers and high-level themes above.</p>
+                    </div>
+                </div>
+                <div class="reg-step">
+                    <div class="reg-step-num">2</div>
+                    <div class="reg-step-content">
+                        <h4>Optional Interlateral team-based sessions</h4>
+                        <p>2:00&ndash;4:00 PM Pacific: simultaneous collaboration groups where participants can propose the topics, form teams, and develop shared outputs. This is a &ldquo;bring your own agent&rdquo; approach and enables a new kind of multi-player shared third-space human/agent collaboration method.</p>
+                    </div>
+                </div>
+                <div class="reg-step">
+                    <div class="reg-step-num">3</div>
+                    <div class="reg-step-content">
+                        <h4>Register to participate</h4>
+                        <p>Sign up to receive updates, participation details, and team-based session invitation information.</p>
+                        <a href="https://docs.google.com/forms/d/1pvQAKZ-iW-6D2_pMmwWUeOTCUh_2pLKP0gtsL0tRGTE/" class="btn" target="_blank" rel="noopener noreferrer" style="margin-top: 8px; padding: 12px 28px; font-size: 0.95rem;">
+                            Register
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ORIGIN AND BACKGROUND ==================== -->
+    <section class="section bg-light">
+        <div class="container">
+            <p style="max-width: 820px;">
+                The law.MIT.edu 2026 Summer Intensive was conceived as part of a near-future
+                speculative fiction piece entitled
+                <a href="https://www.dazzagreenwood.com/p/three-rooms" target="_blank" rel="noopener noreferrer">Three Rooms</a>
+                and is being offered free of charge for all the Lina Vosses out there.
+            </p>
+            <p style="max-width: 820px; color: var(--mit-gray); margin-bottom: 0;">
+                Existing tutorials, readings, and prior event materials remain available below.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== PREVIOUS EVENTS INTRO ==================== -->
+    <section id="previous-events" class="previous-events-intro">
+        <div class="container">
+            <h2 style="border: none; margin-bottom: 10px;">Previous Events and Resources</h2>
+            <p style="color: var(--mit-gray); max-width: 780px;">
+                The April 2026 Stanford FutureLaw workshop, setup tutorials, recordings,
+                readings, and earlier convenings remain below as background for the Summer Intensive.
+            </p>
+        </div>
+    </section>
 
     <!-- ==================== POST-EVENT RECAP BANNER ==================== -->
     <section class="recap-banner">
@@ -1260,10 +1786,10 @@
     <!-- ==================== DIVIDER ==================== -->
     <hr class="section-divider">
 
-    <!-- ==================== PREVIOUS CONVENINGS ==================== -->
-    <section id="previous-events" class="archive-section">
+    <!-- ==================== EARLIER CONVENINGS ==================== -->
+    <section id="older-convenings" class="archive-section">
         <div class="container">
-            <h2 style="border: none; margin-bottom: 10px;">Previous Convenings</h2>
+            <h2 style="border: none; margin-bottom: 10px;">Earlier Convenings</h2>
             <p style="color: var(--mit-gray); margin-bottom: 40px;">Archive of prior sessions in this series.</p>
 
             <!-- ===== Dec 3, 2025: Custom Evals ===== -->
